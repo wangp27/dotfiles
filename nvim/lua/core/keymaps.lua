@@ -39,3 +39,6 @@ keymap.set('n', '<leader>ed', vim.diagnostic.open_float)
 keymap.set('n', '<leader>ea', vim.diagnostic.setloclist)
 keymap.set('n', '[d', vim.diagnostic.goto_prev)
 keymap.set('n', ']d', vim.diagnostic.goto_next)
+
+-- copilot
+keymap.set('i', '<M-Tab>', 'copilot#Accept("\\<CR>")', {expr = true, replace_keycodes = false})
