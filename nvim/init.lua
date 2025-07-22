@@ -1,0 +1,18 @@
+require("plugins.plugins_setup")
+require("core.options")
+require("core.keymaps")
+
+-- plugin configurations
+require("plugins.lualine")
+require("plugins.nvim-tree")
+require("plugins.treesitter")
+require("plugins.lsp")
+require("plugins.cmp")
+require("plugins.comment")
+require("plugins.autopairs")
+require("plugins.bufferline")
+require("plugins.gitsigns")
+require("plugins.telescope")
+-- require("plugins.remote-nvim")
+require("plugins.leap-motion")
+require("plugins.coursor-animation")
