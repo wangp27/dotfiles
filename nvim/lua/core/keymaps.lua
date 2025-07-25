@@ -41,4 +41,5 @@ keymap.set('n', '[d', vim.diagnostic.goto_prev)
 keymap.set('n', ']d', vim.diagnostic.goto_next)
 
 -- copilot
+vim.g.copilot_no_tab_map = true
 keymap.set('i', '<M-Tab>', 'copilot#Accept("\\<CR>")', {expr = true, replace_keycodes = false})

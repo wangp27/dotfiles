@@ -40,6 +40,21 @@ return require('packer').startup(function(use)
         tag = 'v1.32.0'
     }
     use "neovim/nvim-lspconfig"
+
+    -- dap
+    use {
+        'mfussenegger/nvim-dap',
+        requires = {
+            'igorlfs/nvim-dap-view',
+            -- 'rcarriga/nvim-dap-ui',
+            'theHamsta/nvim-dap-virtual-text',
+            'nvim-telescope/telescope-dap.nvim',
+            'nvim-lua/plenary.nvim',
+            'nvim-neotest/nvim-nio'
+        }
+    }
+
+
     -- auto complete
     use {
         "hrsh7th/nvim-cmp",
@@ -49,9 +64,16 @@ return require('packer').startup(function(use)
         "rafamadriz/friendly-snippets"
     }
 
+    use "ray-x/lsp_signature.nvim"
+
     -- gcc and gc comment
     use {
         'numToStr/Comment.nvim',
+    }
+
+    use {
+        "kylechui/nvim-surround",
+        tag = "*",
     }
 
     use {
@@ -69,7 +91,7 @@ return require('packer').startup(function(use)
     -- remote nvim
     use {
         "amitds1997/remote-nvim.nvim",
-        version = "*",
+        branch = "main",
         requires = {
             'nvim-lua/plenary.nvim',
             'MunifTanjim/nui.nvim',
@@ -85,6 +107,15 @@ return require('packer').startup(function(use)
 
     -- copilot
     use "github/copilot.vim"
+
+    -- copilot chat
+    use {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        requires = {
+            "github/copilot.vim",
+            "nvim-lua/plenary.nvim"
+        }
+    }
 
   if packer_bootstrap then
     require('packer').sync()
